@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
+
+:root {
+    --main-gray: linear-gradient(#9bdfe4, #1e5a5f);
+    --main-gray1: linear-gradient(200deg, #a5d0d3, #285d61);
+    --main-white: #d6fbfd;
+    --main-sea: #11898d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Dancing Script", cursive;
+    background: var(--main-gray);
+}
+
+div {
+    position: relative;
+    z-index: 2;
+}
+
+
+#quote-box {
+    position: absolute;
+    font-family: 'EB Garamond', serif;
+    width: 500px;
+    height: 300px;
+    padding: 90px 90px 70px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--main-white);
+    transition: background 0.3s ease-out;
+}
+
+#quote-box:hover {
+    background: var(--main-gray1);
+    color: #d6fbfd;
+    text-shadow: 0 0 5px var(--main-sea);
+    opacity: 0.7;
+    transform: translateY(5px);
+}
+
+#quote {
+    display: flex;
+    flex-direction: column;
+}
+
+q {
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+}
+
+#author {
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+    display: flex;
+    flex-flow: row-reverse;
+    margin-top: 3rem;
+}
+
+.bottom-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(150deg, #6fbbc0, #0c3033);
+    padding: 10px 20px;
+    opacity: 0.3;
+    color: var(--main-white);
+    transition: background 0.3s ease-out;
+}
+
+button:hover {
+    background: linear-gradient(320deg, #6fbbc0, #1c555a);
+    color: #d6fbfd;
+    text-shadow: 0 0 5px #25d2db;
+    opacity: 0.5;
+    transform: translateY(5px);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 5px #104244;
+}
+
+.twit {
+    background: var(--main-white);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease-out;
+}
+
+.twit:hover {
+    background: var(--main-gray);
+    opacity: 1;
+    transform: translateY(3px);
+    text-shadow: 0 0 5px #49f3fc;
+}
+
+#tweet-quote {
+    color: rgb(38, 147, 236);
+    font-weight: 500;
+
+}
+
+.footer {
+    position: absolute;
+    text-decoration: none;
+    color: var(--main-white);
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    margin-block-end: -39rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.footer:hover {
+    opacity: 1;
+    transform: translateY(3px);
+    text-shadow: 0 0 5px #49f3fc;
+}
+
+
+
+/* scene */
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.scene i {
+    position: absolute;
+    border: 1px solid var(--main-white);
+    ;
+    /* background: var(--main-white); */
+    border-radius: 50%;
+    animation: animate 0.3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    90% {
+        opacity: 0.3;
+
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
